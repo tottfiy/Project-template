@@ -1,0 +1,30 @@
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/santastyle.css' %}">
+    <title>Is it Christmas today?</title>
+</head>
+<body>
+    <h1>Is it Christmas today?</h1>
+    <div id="isit">
+        <h2 class="big">
+            {% if date %}
+                Yes!
+            {% else %}
+                NO
+            {% endif %}
+        </h2>
+    </div>
+    <div id="link">
+    <a href="{% url 'santa' %}" class="button">
+        <h3>Secret Santa Game</h3>
+    </a>
+</div>
+</body>
+</html>
